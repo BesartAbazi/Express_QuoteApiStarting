@@ -114,7 +114,7 @@ app.put('/api/quotes', (req, res) => {
 app.delete('/api/quotes/:id', (req, res) => {
     const index = quotes.findIndex(quote => {
         return quote.id === req.params.id;
-    })
+    });
 
     if (index !== -1){
         quotes.splice(index, 1);
